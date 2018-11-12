@@ -1,40 +1,10 @@
 (function () {
-    const myQuestions = [{
-            question: "Who is the strongest?",
-            answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "What is the best site ever created?",
-            answers: {
-                a: "SitePoint",
-                b: "Simple Steps Code",
-                c: "Trick question; they're both the best"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Where is Waldo really?",
-            answers: {
-                a: "Antarctica",
-                b: "Exploring the Pacific Ocean",
-                c: "Sitting in a tree",
-                d: "Minding his own business, so stop asking"
-            },
-            correctAnswer: "d"
-        }
-    ];
-
     function buildQuiz() {
         // we'll need a place to store the HTML output
         const output = [];
 
         // for each question...
-        myQuestions.forEach((currentQuestion, questionNumber) => {
+        quizQuestions.forEach((currentQuestion, questionNumber) => {
             // we'll want to store the list of answer choices
             const answers = [];
 
@@ -71,7 +41,7 @@
         let numCorrect = 0;
 
         // for each question...
-        myQuestions.forEach((currentQuestion, questionNumber) => {
+        quizQuestions.forEach((currentQuestion, questionNumber) => {
             // find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
@@ -92,7 +62,7 @@
         });
 
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
     }
 
     function showSlide(n) {
