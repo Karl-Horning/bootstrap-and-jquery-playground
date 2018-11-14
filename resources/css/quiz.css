@@ -50,10 +50,6 @@ button:hover {
     background-color: #38a;
 }
 
-
-
-
-
 .slide {
     position: absolute;
     left: 0px;
@@ -71,6 +67,10 @@ button:hover {
 
 .quiz-container {
     position: relative;
-    height: 200px;
+    min-height: 250px;
     margin-top: 40px;
+}
+
+.display-none {
+    display: none;
 }
