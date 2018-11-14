@@ -1,10 +1,12 @@
 (function () {
+    const questions = quizQuestions;
+
     function buildQuiz() {
         // we'll need a place to store the HTML output
         const output = [];
 
         // for each question...
-        quizQuestions.forEach((currentQuestion, questionNumber) => {
+        questions.forEach((currentQuestion, questionNumber) => {
             // we'll want to store the list of answer choices
             const answers = [];
 
@@ -25,6 +27,7 @@
                 `<div class="slide">
                 <div class="question"> ${currentQuestion.question} </div>
                 <div class="answers"> ${answers.join("")} </div>
+                <div class="total">Question ${questionNumber + 1} of ${questions.length}</div>
                 </div>`
             );
         });
@@ -41,7 +44,7 @@
         let numCorrect = 0;
 
         // for each question...
-        quizQuestions.forEach((currentQuestion, questionNumber) => {
+        questions.forEach((currentQuestion, questionNumber) => {
             // find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
@@ -62,7 +65,7 @@
         });
 
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
+        resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
     }
 
     function showSlide(n) {
@@ -78,10 +81,12 @@
 
         if (currentSlide === slides.length - 1) {
             nextButton.style.display = "none";
-            submitButton.style.display = "inline-block";
+            // submitButton.style.display = "inline-block";
+            reviewButton.style.display = "inline-block";
         } else {
             nextButton.style.display = "inline-block";
             submitButton.style.display = "none";
+            reviewButton.style.display = "none";
         }
     }
 
@@ -93,9 +98,22 @@
         showSlide(currentSlide - 1);
     }
 
+    function reviewSlides() {
+        slides[currentSlide].classList.remove("active-slide");
+        // Display all of the questions on one page to be reviewed
+        slides.forEach((slide) => slide.classList.remove("slide"));
+        totals.forEach((total) => total.classList.add("display-none"));
+        submitButton.style.display = "block";
+        reviewButton.style.display = "none";
+        previousButton.style.display = "none";
+        quizInfo.innerText = "Please review your answers before submitting them!";
+    }
+
+    const quizInfo = document.getElementById("quizInfo");
     const quizContainer = document.getElementById("quiz");
     const resultsContainer = document.getElementById("results");
     const submitButton = document.getElementById("submit");
+    const reviewButton = document.getElementById("review");
 
     // display quiz right away
     buildQuiz();
@@ -103,12 +121,15 @@
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
+    const totals = document.querySelectorAll(".total");
     let currentSlide = 0;
 
     showSlide(0);
 
     // on submit, show results
     submitButton.addEventListener("click", showResults);
+    // on review, show all of the user's selected answers
+    reviewButton.addEventListener("click", reviewSlides);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
 })();
