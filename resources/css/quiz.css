@@ -78,3 +78,7 @@ button:hover {
 .wrong-answer {
     color: red;
 }
+
+.right-answer {
+    color: lightgreen;
+}

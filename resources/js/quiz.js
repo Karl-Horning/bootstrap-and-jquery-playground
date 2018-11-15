@@ -30,12 +30,6 @@
                 <div class="feedback wrong-answer"></div>
                 <div class="total">Question ${questionNumber + 1} of ${questions.length}</div>
                 </div>`
-                // `<div class="slide">
-                // <div class="question"> ${currentQuestion.question} </div>
-                // <div class="answers"> ${answers.join("")} </div>
-                // <div class="feedback display-none">${currentQuestion.feedback}</div>
-                // <div class="total">Question ${questionNumber + 1} of ${questions.length}</div>
-                // </div>`
             );
         });
 
@@ -63,16 +57,12 @@
                 numCorrect++;
 
                 // color the answers green
-                answerContainers[questionNumber].style.color = "lightgreen";
+                answerContainers[questionNumber].classList.add("right-answer");
             } else {
                 // if answer is wrong or blank
                 // color the answers red
-                answerContainers[questionNumber].style.color = "red";
-                console.log(currentQuestion.feedback);
+                answerContainers[questionNumber].classList.add("wrong-answer");
                 $('.feedback')[questionNumber].innerText = currentQuestion.feedback;
-
-
-                // answerContainers[questionNumber].classList.remove("display-none");
             }
         });
 
