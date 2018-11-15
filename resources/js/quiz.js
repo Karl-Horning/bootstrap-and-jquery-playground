@@ -40,6 +40,7 @@
     function showResults() {
         // gather answer containers from our quiz
         const answerContainers = quizContainer.querySelectorAll(".answers");
+        quizInfo.innerText = "Your results";
 
         // keep track of user's answers
         let numCorrect = 0;
@@ -66,8 +67,50 @@
             }
         });
 
+        const percentage = Math.round((numCorrect / questions.length) * 100);
+        let message;
+
+        switch (true) {
+            case percentage === 100:
+                message = 'Perfect!'
+                break;
+            case percentage > 90:
+                message = 'Excellent!'
+                break;
+            case percentage > 80:
+                message = 'Quiz Ninja!'
+                break;
+            case percentage > 70:
+                message = 'Great!'
+                break;
+            case percentage > 60:
+                message = 'Good!'
+                break;
+            case percentage > 50:
+                message = 'OK!'
+                break;
+            case percentage > 40:
+                message = 'Could be better!'
+                break;
+            case percentage > 30:
+                message = 'Try again!'
+                break;
+            case percentage > 20:
+                message = 'You need to study!'
+                break;
+            case percentage > 20:
+                message = 'Oh dear!'
+                break;
+            default:
+                message = 'What happened?!'
+                break;
+        }
+
+        console.log(message);
+
+
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
+        resultsContainer.innerHTML = `${message} You got ${numCorrect} out of ${questions.length} correct!`;
     }
 
     function showSlide(n) {
