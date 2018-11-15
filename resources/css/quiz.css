@@ -74,3 +74,7 @@ button:hover {
 .display-none {
     display: none;
 }
+
+.wrong-answer {
+    color: red;
+}
