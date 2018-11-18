@@ -13,3 +13,17 @@
     min-width: 100%;
     padding: 20px;
 }
+
+input:checked+label {
+    color: red;
+}
+
+input[type="radio"]:checked+label {
+    color: red;
+}
+
+/* Radio element, when checked */
+input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
+    color: red !important;
+}

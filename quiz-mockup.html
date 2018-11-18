@@ -13,41 +13,42 @@
 <body>
     <div class="container">
         <div class="quiz">
+            <header id="card-header" class="row align-items-end my-5">
+                <div class="col-lg-9">
+                    <h2 class="">The Quiz About Stuff</h2>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <h5>Question 2 of 10</h5>
+                </div>
+            </header>
+            <hr class="my-5">
             <div class="row">
                 <div class="col">
-                    <h2 class="my-5">The Quiz About Stuff</h2>
+                    <h5 class="question mb-5">Where is Waldo really?</h5>
                 </div>
             </div>
             <div class="row">
-                <div class="col-10">
-                    <p class="question">Where is Waldo really?</p>
-                </div>
-                <div class="col-2 text-right">
-                    <p>Question 2 of 10</p>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col">
-                    <ul class="list-group answers">
-                        <li class="list-group-item list-group-item-action answer">
+                    <ul id="answer-list" class="list-group list-group-item-action answers">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer">
                             <label class="question-label">
                                 <input type="radio" name="quiz-options" value="Antarctica">
                                 Antarctica
                             </label>
                         </li>
-                        <li class="list-group-item list-group-item-action answer">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer active">
                             <label class="question-label">
-                                <input type="radio" name="quiz-options" value="Exploring-the-Pacific-Ocean">
+                                <input type="radio" name="quiz-options" value="Exploring-the-Pacific-Ocean" checked>
                                 Exploring the Pacific Ocean
                             </label>
                         </li>
-                        <li class="list-group-item list-group-item-action answer">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer">
                             <label class="question-label">
                                 <input type="radio" name="quiz-options" value="Sitting-in-a-tree">
                                 Sitting in a tree
                             </label>
                         </li>
-                        <li class="list-group-item list-group-item-action answer">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer">
                             <label class="question-label">
                                 <input type="radio" name="quiz-options" value="Minding-his-own-business-so-stop-asking">
                                 Minding his own business, so stop asking
@@ -58,28 +59,15 @@
             </div>
             <div class="row">
                 <div class="col my-5">
-                    <button class="btn btn-lg btn-primary btn-block">Next Question</button>
-                </div>
+                    <button class="btn btn-lg btn-primary btn-block">&#8678; Previous Question</button> </div>
                 <div class="col my-5">
-                    <button class="btn btn-lg btn-primary btn-block">Previous Question</button>
+                    <button class="btn btn-lg btn-primary btn-block">Next Question &#8680;</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/quiz-mockup.js"></script>
 </body>
-<!-- 
-<label>
-    <input type="radio" name="question${questionNumber}" value="${letter}">
-    ${letter} :
-    ${currentQuestion.answers[letter]}
-</label> 
--->
-
-<!-- 
-a : Antarctica
-b : Exploring the Pacific Ocean
-c : Sitting in a tree
-d : Minding his own business, so stop asking 
--->
 
 </html>
