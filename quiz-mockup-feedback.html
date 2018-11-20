@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/css/quiz-mockup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="quiz">
+            <header id="card-header" class="row align-items-end my-5">
+                <div class="col-lg-9">
+                    <h2 class="">The Quiz About Stuff</h2>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <h5><span class="badge badge-info">Feedback</span></h5>
+                </div>
+            </header>
+            <hr class="my-5">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h3 class="question mb-5">Quiz Ninja</h3>
+                </div>
+                <div class="col-12">
+                    <p class="display-1 question mb-5">1/3</p>
+                </div>
+                <div class="col-12">
+                    <h5 class="question mb-5">Share your result, or scroll down for feedback</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-5">
+                    <button class="btn btn-lg btn-primary btn-block">Facebook</button>
+                </div>
+                <div class="col mb-5">
+                    <button class="btn btn-lg btn-info btn-block">Twitter</button>
+                </div>
+                <div class="col mb-5">
+                    <button class="btn btn-lg btn-secondary btn-block">Email</button>
+                </div>
+            </div>
+
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <h5 class="question mb-5">Who is the strongest?</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul id="answer-list" class="list-group list-group-item-action answers">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item active">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q1" value="Antarctica"
+                                    checked>
+                                Superman
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q1" value="Exploring-the-Pacific-Ocean">
+                                The Terminator
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q1" value="Sitting-in-a-tree">
+                                Waluigi, obviously
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p class="alert alert-danger">Incorrect: I'm sorry, but Waluigi is clearly the strongest!</p>
+                </div>
+            </div>
+
+
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <h5 class="question mb-5">What is the best site ever created?</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul id="answer-list" class="list-group list-group-item-action answers">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q2" value="Antarctica">
+                                SitePoint
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item active">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q2" value="Exploring-the-Pacific-Ocean"
+                                    checked>
+                                Simple Steps Code
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q2" value="Sitting-in-a-tree">
+                                Trick question; they're both the best
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p class="alert alert-danger">Incorrect: Both are great to learn from!</p>
+                </div>
+            </div>
+
+
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <h5 class="question mb-5">Where is Waldo really?</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul id="answer-list" class="list-group list-group-item-action answers">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q3" value="Antarctica">
+                                Antarctica
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q3" value="Exploring-the-Pacific-Ocean">
+                                Exploring the Pacific Ocean
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q3" value="Sitting-in-a-tree">
+                                Sitting in a tree
+                            </label>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item active">
+                            <label class="question-label">
+                                <input disabled class="answer-radio mr-3" type="radio" name="quiz-options-q3" value="Minding-his-own-business-so-stop-asking"
+                                    checked>
+                                Minding his own business, so stop asking
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p class="alert alert-success">Correct: Waluigi is clearly the strongest!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-5">
+                    <button class="btn btn-lg btn-info btn-block">Try again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/quiz-mockup.js"></script>
+</body>
+
+</html>
