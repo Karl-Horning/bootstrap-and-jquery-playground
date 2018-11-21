@@ -13,58 +13,66 @@
 <body>
     <div class="container">
         <div class="quiz">
-            <header id="card-header" class="row align-items-end my-5">
-                <div class="col-lg-9">
-                    <h2 class="">The Quiz About Stuff</h2>
+            <section id="quiz-header-and-info">
+                <header id="card-header" class="row align-items-end my-5">
+                    <div class="col-lg-9">
+                        <h2 class="">The Quiz About Stuff</h2>
+                    </div>
+                    <div class="col-lg-3 text-right">
+                        <h5><span class="badge badge-info">Question 2 of 10</span></h5>
+                    </div>
+                </header>
+            </section>
+
+            <section id="card-2">
+                <hr class="my-5">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="question mb-5">Where is Waldo really?</h5>
+                    </div>
                 </div>
-                <div class="col-lg-3 text-right">
-                    <h5><span class="badge badge-info">Question 2 of 10</span></h5>
+                <div class="row">
+                    <div class="col">
+                        <ul id="answer-list" class="list-group list-group-item-action answers">
+                            <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                                <label class="question-label">
+                                    <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Antarctica">
+                                    Antarctica
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item active">
+                                <label class="question-label">
+                                    <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Exploring-the-Pacific-Ocean"
+                                        checked>
+                                    Exploring the Pacific Ocean
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                                <label class="question-label">
+                                    <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Sitting-in-a-tree">
+                                    Sitting in a tree
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
+                                <label class="question-label">
+                                    <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Minding-his-own-business-so-stop-asking">
+                                    Minding his own business, so stop asking
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </header>
-            <hr class="my-5">
-            <div class="row">
-                <div class="col">
-                    <h5 class="question mb-5">Where is Waldo really?</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <ul id="answer-list" class="list-group list-group-item-action answers">
-                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
-                            <label class="question-label">
-                                <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Antarctica">
-                                Antarctica
-                            </label>
-                        </li>
-                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item active">
-                            <label class="question-label">
-                                <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Exploring-the-Pacific-Ocean"
-                                    checked>
-                                Exploring the Pacific Ocean
-                            </label>
-                        </li>
-                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
-                            <label class="question-label">
-                                <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Sitting-in-a-tree">
-                                Sitting in a tree
-                            </label>
-                        </li>
-                        <li class="list-group-item list-group-item-action list-group-item-secondary answer-list-item">
-                            <label class="question-label">
-                                <input class="answer-radio mr-3" type="radio" name="quiz-options" value="Minding-his-own-business-so-stop-asking">
-                                Minding his own business, so stop asking
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col my-5">
-                    <button class="btn btn-lg btn-primary btn-block">&#8678; Previous Question</button> </div>
-                <div class="col my-5">
-                    <button class="btn btn-lg btn-primary btn-block">Next Question &#8680;</button>
-                </div>
-            </div>
+            </section>
+
+            <section id="quiz-footer">
+                <footer class="row">
+                    <div class="col my-5">
+                        <button class="btn btn-lg btn-primary btn-block">&#8678; Previous Question</button> </div>
+                    <div class="col my-5">
+                        <button class="btn btn-lg btn-primary btn-block">Next Question &#8680;</button>
+                    </div>
+                </footer>
+            </section>
         </div>
     </div>
     <script src="vendors/jquery/jquery-3.3.1.min.js"></script>
